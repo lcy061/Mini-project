@@ -14,10 +14,10 @@ typedef struct {
 int selectMenu();
 int selectDataNo(Score s[], int count);
 
-void Create(Movie *s, int count)
-void Read(Movie *s, int count)
-void Update(Movie *s, int num)
-void Delete(Movie *s, int num)
+void Create(Movie *s, int count);
+void Read(Movie *s, int count);
+void Update(Movie *s, int num);
+void Delete(Movie *s, int num);
 void saveData(Movie *s, int count);
 int loadData(Movie *s);
 void searchMovie(Movie *s, int count);
