@@ -1,4 +1,4 @@
-#include<stdio.h> 
+#include <stdio.h> 
 
 typedef struct {
   char movie_name[100];
