@@ -11,17 +11,16 @@ typedef struct {
 
 } Movie;
 
+int selectMenu();
+int selectDataNo(Score s[], int count);
 
-
-
-//CRUD
-void create(Movie *s, int count)
-void read(Movie *s, int count)
-void update(Movie *s, int num)
-void delete(Movie *s, int num)
- 
-  
-//Seach 
-  
-void searchDirector(Movie *s, int count)
-void searchRank(Movie *s, int count)
+void Create(Movie *s, int count)
+void Read(Movie *s, int count)
+void Update(Movie *s, int num)
+void Delete(Movie *s, int num)
+void saveData(Movie *s, int count);
+int loadData(Movie *s);
+void searchMovie(Movie *s, int count);
+void searchStar(Movie *s, int count);
+void searchDirector(Movie *s, int count);
+void searchGenre(Movie *s, int count);
