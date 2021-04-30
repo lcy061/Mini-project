@@ -10,3 +10,18 @@ typedef struct {
   int ranking;
 
 } Movie;
+
+
+
+
+//CRUD
+void create(Movie *s, int count)
+void read(Movie *s, int count)
+void update(Movie *s, int num)
+void delete(Movie *s, int num)
+ 
+  
+//Seach 
+  
+void searchDirector(Movie *s, int count)
+void searchRank(Movie *s, int count)
