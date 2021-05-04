@@ -11,7 +11,7 @@ typedef struct {
 
 //Menu
 int selectMenu();
-int selectDataNo(Score s[], int count);
+int selectDataNo(Movie s[], int count);
 
 //CRUD
 void Create(Movie *s, int count);
