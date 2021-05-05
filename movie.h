@@ -11,20 +11,21 @@ typedef struct {
 
 //Menu
 int selectMenu();
-int selectDataNo(Movie s[], int count);
+int selectDataNo(Movie *m, int count);
 
 //CRUD
-void Create(Movie *s, int count);
-void Read(Movie *s, int count);
-void Update(Movie *s, int num);
-void Delete(Movie *s, int num);
+int createMovie(Movie *m);
+int readMovie(Movie m);
+int updateMovie(Movie *m);
+int deleteMovie(Movie *m);
+void listMovie(Movie *m, int count);
 
 //Save&Load
-void saveData(Movie *s, int count);
-int loadData(Movie *s);
+void saveData(Movie *m, int count);
+int loadData(Movie *m);
 
 //Search
-void searchMovie(Movie *s, int count);
-void searchStar(Movie *s, int count);
-void searchDirector(Movie *s, int count);
-void searchGenre(Movie *s, int count);
+void searchMovie(Movie *m, int count);
+void searchStar(Movie *m, int count);
+void searchDirector(Movie *m, int count);
+void searchGenre(Movie *m, int count);
