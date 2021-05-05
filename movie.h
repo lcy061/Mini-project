@@ -15,8 +15,8 @@ int selectDataNo(Movie *m, int count);
 
 //CRUD
 int createMovie(Movie *m);
-int readMovie(Movie m);
-int updateMovie(Movie *m);
+void readMovie(Movie m);
+void updateMovie(Movie *m);
 int deleteMovie(Movie *m);
 void listMovie(Movie *m, int count);
 
