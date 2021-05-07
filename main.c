@@ -25,12 +25,13 @@ int main(){
                         count += createMovie(&mlist[index++]);
                 }
                 else if(menu == 3){
-                        int no = selectDataNo(mlist, index);
+                       /* int no = selectDataNo(mlist, index);
                         if(no == 0){
                                 printf("=> 취소됨!\n");
                                 continue;
                         }
-                        updateMovie(&mlist[no-1]);
+                        updateMovie(&mlist[no-1]);*/
+                        updateMovie(mlist);
                 }
                 else if(menu == 4){
                                 int no = selectDataNo(mlist, index);
@@ -47,7 +48,7 @@ int main(){
                                 }
                                 else continue;
                         }
-                
+
         }
         printf("종료됨!\n");
         return 0;
