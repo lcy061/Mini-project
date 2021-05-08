@@ -18,25 +18,23 @@ int main(){
                         }
                 }
                 if(menu == 1){
-                        readMovie(*mlist);
-                        // listMovie(mlist, index);
+                        listMovie(mlist, index);
                 }
                 else if(menu == 2){
                         count += createMovie(&mlist[index++]);
                 }
                 else if(menu == 3){
-                       /* int no = selectDataNo(mlist, index);
-                        if(no == 0){
-                                printf("=> 취소됨!\n");
+                       int no = selectDataNo(mlist, index);
+                       if(no == 0){
+                                printf("=> 취소되었습니다!\n");
                                 continue;
                         }
-                        updateMovie(&mlist[no-1]);*/
-                        updateMovie(mlist);
+                        updateMovie(&mlist[no-1]);
                 }
                 else if(menu == 4){
                                 int no = selectDataNo(mlist, index);
                                 if(no == 0){
-                                        printf("=> 취소됨!\n");
+                                        printf("=> 취소되었습니다!\n");
                                         continue;
                                 }
                                 int delok;
@@ -48,8 +46,7 @@ int main(){
                                 }
                                 else continue;
                         }
-
         }
-        printf("종료됨!\n");
+        printf("프로그램이 종료 되었습니다!\n");
         return 0;
 }
