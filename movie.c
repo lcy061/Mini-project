@@ -36,24 +36,18 @@ int createMovie(Movie *m){
         scanf("%s", m->date);
         printf("영화 순위는? ");
         scanf("%d", &m->ranking);
-        printf("=> 추가됨!\n");
+        printf("=> 영화 정보가 추가되었습니다!\n");
 
         return 1;
 }
 
 void readMovie(Movie m){
         if(m.ranking!=-1){
-		/*	
-                printf("%40s\t%8s\t%4.1f\t%6s\t%10s\t%4d\n",
-                m.movie_name, m.director, m.star, m.genre, m.date, m.ranking);
-		*/
-		
 		printf("%-20s / %-5s / %-3.1f / %-5s / %-10s / %d\n",
                 m.movie_name, m.director, m.star, m.genre, m.date, m.ranking);
 		
         }
 }
-
 
 void updateMovie(Movie *m){
         getchar();
@@ -75,14 +69,13 @@ void updateMovie(Movie *m){
 
 int deleteMovie(Movie *m){
         m-> ranking = -1; 
-        printf("선택한 영화가 삭제되었습니다."); 
+        printf("\n=> 선택한 영화가 삭제되었습니다!\n"); 
 
         return 1;
 }
 
 void listMovie(Movie *m, int count){
-
-          printf("No %-20s / %s / %s / %s / %s / %s \n", "Movie Title", "Director", "Start", "Genre", "Open Date", "Ranking");
+          printf("\nNo %-20s / %s / %s / %s / %s / %s \n", "Movie Title", "Director", "Start", "Genre", "Open Date", "Ranking");
 	  printf("**************************************************************************\n");
           for(int i = 0; i < count; i++){ 
 		if(m[i].ranking == -1) continue;
