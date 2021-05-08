@@ -43,12 +43,14 @@ int createMovie(Movie *m){
 
 void readMovie(Movie m){
         if(m.ranking!=-1){
-		/*
-                printf("%20s\t%8s\t%4.1f\t%6s\t%10s\t%4d\n",
+		/*	
+                printf("%40s\t%8s\t%4.1f\t%6s\t%10s\t%4d\n",
                 m.movie_name, m.director, m.star, m.genre, m.date, m.ranking);
 		*/
-		printf("%s    %s    %.1f    %s    %s    %d\n",
+		
+		printf("%-20s / %-5s / %-3.1f / %-5s / %-10s / %d\n",
                 m.movie_name, m.director, m.star, m.genre, m.date, m.ranking);
+		
         }
 }
 
@@ -80,10 +82,10 @@ int deleteMovie(Movie *m){
 
 void listMovie(Movie *m, int count){
 
-          printf("No\tMovie Title\tDirector\tStar\tGenre\tOpen Date\tRanking\n");
+          printf("No %-20s / %s / %s / %s / %s / %s \n", "Movie Title", "Director", "Start", "Genre", "Open Date", "Ranking");
 	  printf("**************************************************************************\n");
           for(int i = 0; i < count; i++){ 
-		if(m->ranking[i] == -1) continue;
+		if(m[i].ranking == -1) continue;
 		printf("%2d ", i+1);
                 readMovie(m[i]); 
         }
