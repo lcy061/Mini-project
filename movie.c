@@ -45,7 +45,6 @@ void readMovie(Movie m){
         if(m.ranking!=-1){
 		printf("%-20s / %-5s / %-3.1f / %-5s / %-10s / %d\n",
                 m.movie_name, m.director, m.star, m.genre, m.date, m.ranking);
-		
         }
 }
 
