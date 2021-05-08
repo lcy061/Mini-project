@@ -47,6 +47,6 @@ int main(){
                                 else continue;
                         }
         }
-        printf("프로그램이 종료 되었습니다!\n");
+        printf("\n=> 프로그램이 종료 되었습니다!\n");
         return 0;
 }
