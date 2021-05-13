@@ -1,5 +1,17 @@
-void saveData(Movie *m, int count){
+#include <stdlib.h>
+#include <string.h>
 
+void saveData(Movie *m, int count){
+    FILE *fp;
+    fp = fopen("movie.txt", "wt");
+
+    for(int i = 0 ; i < count ; i++){
+        if(m[i].ranking == -1) continue;
+        fprintf(fp, "%s | %s %.1f %s %s %d\n", m[i].movie_name, m[i].director, m[i].star, m[i].genre, m[i].date, m[i].ranking);
+    }
+
+    fclose(fp);
+    printf("성공적으로 저장되었습니다!\n");
 }
 
 int loadData(Movie *m){
