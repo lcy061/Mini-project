@@ -63,10 +63,49 @@ void searchStar(Movie *m, int count){
 }   
 
 void searchDirector(Movie *m, int count){
+    int scnt = 0;
+    char name[50];
 
+        printf("검색할 감독은? ");
+        scanf("%s", name); 
+        
+        printf("\nNo %-20s / %s / %s / %s / %s / %s \n", "Movie Title", "Director", "Start", "Genre", "Open Date", "Ranking");
+	printf("**************************************************************************\n");
+
+        for(int i=0; i<count; i++){ 
+                if(m[i].ranking == -1) continue;
+                if(!strcmp(name, m[i].director)){ 
+                        printf("%2d ", i+1);
+                        readMovie(m[i]);                        
+                        scnt++;                        
+                }
+        }
+        if(scnt == 0){
+        printf("=> 검색된 감독이 없습니다!\n");
+    }    
 }
 
 void searchGenre(Movie *m, int count){
+    int scnt = 0;
+    char name[50];
+
+        printf("검색할 장르는? ");
+        scanf("%s", name); 
+        
+        printf("\nNo %-20s / %s / %s / %s / %s / %s \n", "Movie Title", "Director", "Start", "Genre", "Open Date", "Ranking");
+	printf("**************************************************************************\n");
+
+    for(int i=0; i<count; i++){ 
+                if(m[i].ranking == -1) continue;
+                if(!strcmp(name, m[i].genre)){ 
+                        printf("%2d ", i+1);
+                        readMovie(m[i]);                        
+                        scnt++;                                
+                }
+    }     
+    if(scnt == 0){
+        printf("=> 검색된 장르가 없습니다!\n");
+    }
 
 }
 
