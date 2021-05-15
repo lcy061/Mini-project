@@ -66,7 +66,6 @@
 > + 저장 된 영화의 갯수가 return 값이 된다. 
 ![image](https://user-images.githubusercontent.com/61354751/118360794-a798ef00-b5c3-11eb-9e9b-64dc0d37fbf6.png)
 
-![image](https://user-images.githubusercontent.com/61354751/118360793-a5cf2b80-b5c3-11eb-8f08-c97024551ad4.png)
 
 ## Search 
 * searchMovie(Movie *m, int count)
@@ -87,7 +86,7 @@
 * searchGenre(Movie *m, int count)
 > + 영화 장르로 검색하는 함수
 > + 영화 장르와 일치하는 영화를 리스트로 보여준다. 
-![image](https://user-images.githubusercontent.com/61354751/118360582-66a0da80-b5c3-11eb-851a-fc916ceabc5c.png)
+> + ![image](https://user-images.githubusercontent.com/61354751/118360582-66a0da80-b5c3-11eb-851a-fc916ceabc5c.png)
 
 
 
