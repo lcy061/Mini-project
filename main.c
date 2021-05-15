@@ -51,15 +51,19 @@ int main(){
                         saveData(mlist, index);
                 }
                 else if(menu == 6){
-                        searchMovie(mlist, index);
+                        index = loadData(mlist);
+                        count = index; 
                 }
                 else if(menu == 7){
-                        searchStar(mlist, index);
+                        searchMovie(mlist, index);
                 }
                 else if(menu == 8){
-                        searchDirector(mlist, index);
+                        searchStar(mlist, index);
                 }
                 else if(menu == 9){
+                        searchDirector(mlist, index);
+                }
+                else if(menu == 10){
                         searchGenre(mlist, index);
                 }
         }
@@ -67,4 +71,5 @@ int main(){
 
 	return 0;
 }
+
 

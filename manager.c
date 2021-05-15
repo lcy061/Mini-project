@@ -15,7 +15,22 @@ void saveData(Movie *m, int count){
 }
 
 int loadData(Movie *m){
-    return 0;
+    int max = 50; 
+    int count = 0; 
+    FILE *fp;
+    fp = fopen("movie.txt", "r");
+
+    while( EOF!=fscanf(fp, "%s | %s %f %s %s %d\n", m[count].movie_name, m[count].director, &m[count].star, m[count].genre, m[count].date, &m[count].ranking)){         
+
+        count++; 
+
+    }
+
+    fclose(fp);
+    printf("성공적으로 불러오기 되었습니다!\n");
+
+
+    return count;
 }
 
 void searchMovie(Movie *m, int count){
@@ -108,4 +123,5 @@ void searchGenre(Movie *m, int count){
     }
 
 }
+
 
