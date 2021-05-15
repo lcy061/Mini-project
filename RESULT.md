@@ -52,3 +52,45 @@
 
 <img width="531" alt="KakaoTalk_20210508_212825687_03" src="https://user-images.githubusercontent.com/61354751/117539214-a0626600-b044-11eb-837c-07b6243085f8.png">
 
+## Save&Load
+ 
+### 세이브 
+* saveData(Movie *m, int count)
+> + 프로그램 내 추가 된 영화 목록을 txt 파일로 만들어 저장한다. 
+![image](https://user-images.githubusercontent.com/61354751/118360798-ae276680-b5c3-11eb-97f4-439c86a8db1b.png)
+![image](https://user-images.githubusercontent.com/61354751/118360796-ab2c7600-b5c3-11eb-80d7-1c8049debfe7.png)
+
+### 로드
+* loadData(Movie *m)
+> + txt 파일로 된 영화 목록을 프로그램의 배열에 저장한다. 
+> + 저장 된 영화의 갯수가 return 값이 된다. 
+![image](https://user-images.githubusercontent.com/61354751/118360794-a798ef00-b5c3-11eb-9e9b-64dc0d37fbf6.png)
+
+![image](https://user-images.githubusercontent.com/61354751/118360793-a5cf2b80-b5c3-11eb-8f08-c97024551ad4.png)
+
+## Search 
+* searchMovie(Movie *m, int count)
+> + 영화의 이름을 검색하는 함수.
+> + 검색 내용이 포함 된 영화의 리스트를 보여준다.
+![image](https://user-images.githubusercontent.com/61354751/118360687-98b23c80-b5c3-11eb-8f81-8d482f97af18.png)
+
+* searchStar(Movie *m, int count)
+> + 별점으로 영화를 검색하는 함수.
+> + 별점과 일치하는 영화를 리스트로 보여준다. 
+![image](https://user-images.githubusercontent.com/61354751/118360761-9cde5a00-b5c3-11eb-8f4c-dbcf86304a89.png)
+
+* searchDirector(Movie *m, int count) 
+> + 영화 감독명을 검색하는 함수
+> + 영화 감독의 이름과 일치하는 영화를 리스트로 보여준다. 
+![image](https://user-images.githubusercontent.com/61354751/118360790-a1a30e00-b5c3-11eb-8909-33bc2771c77b.png)
+
+* searchGenre(Movie *m, int count)
+> + 영화 장르로 검색하는 함수
+> + 영화 장르와 일치하는 영화를 리스트로 보여준다. 
+![image](https://user-images.githubusercontent.com/61354751/118360582-66a0da80-b5c3-11eb-851a-fc916ceabc5c.png)
+
+
+
+
+
+
