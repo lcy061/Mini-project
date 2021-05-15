@@ -1,6 +1,7 @@
 // main.c
 #include "movie.h"
 #include "movie.c"
+#include "manager.c"
 
 int main(){
         Movie mlist[100];
@@ -45,9 +46,25 @@ int main(){
                                     if(deleteMovie(&mlist[no-1])) count--;
                                 }
                                 else continue;
-                        }
+                }
+                else if(menu == 5){
+                        saveData(mlist, index);
+                }
+                else if(menu == 6){
+                        searchMovie(mlist, index);
+                }
+                else if(menu == 7){
+                        searchStar(mlist, index);
+                }
+                else if(menu == 8){
+                        searchDirector(mlist, index);
+                }
+                else if(menu == 9){
+                        searchGenre(mlist, index);
+                }
         }
-        printf("\n=> 프로그램이 종료 되었습니다!\n");
-        
+        printf("\n=> 프로그램이 종료 되었습니다!\n");        
+
 	return 0;
 }
+
