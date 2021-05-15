@@ -18,7 +18,12 @@ int loadData(Movie *m){
     int max = 50; 
     int count = 0; 
     FILE *fp;
-    fp = fopen("movie.txt", "r");
+    fp = fopen("movie.txt", "rt");
+
+    if(fp == NULL){
+    	printf("\n=> 불러올 파일이 없습니다!\n");
+	return 0;
+    }
 
     while( EOF!=fscanf(fp, "%s | %s %f %s %s %d\n", m[count].movie_name, m[count].director, &m[count].star, m[count].genre, m[count].date, &m[count].ranking)){         
 
