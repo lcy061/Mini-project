@@ -9,6 +9,9 @@ int main(){
         int count = 0;
         int menu;
 
+	count = loadData(mlist);
+	index = count;
+
         while(1){
                 menu = selectMenu();
                 if(menu == 0) break;
@@ -51,19 +54,15 @@ int main(){
                         saveData(mlist, index);
                 }
                 else if(menu == 6){
-                        index = loadData(mlist);
-                        count = index; 
-                }
-                else if(menu == 7){
                         searchMovie(mlist, index);
                 }
-                else if(menu == 8){
+                else if(menu == 7){
                         searchStar(mlist, index);
                 }
-                else if(menu == 9){
+                else if(menu == 8){
                         searchDirector(mlist, index);
                 }
-                else if(menu == 10){
+                else if(menu == 9){
                         searchGenre(mlist, index);
                 }
         }
