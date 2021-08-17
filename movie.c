@@ -1,4 +1,4 @@
-int selectMenu(){
+int selectMenu(){ 
         int menu;
         int i = 0;
         printf("\n*** 영화 정보 관리 프로그램 ***\n");
@@ -27,7 +27,7 @@ int selectDataNo(Movie *m, int count){
         return num;
 }
 
-int createMovie(Movie *m){
+int createMovie(Movie *m){ // 영화 정보 추가
         getchar();
         printf("영화 제목은? ");
         scanf("%[^\n]s", m->movie_name);
@@ -47,14 +47,14 @@ int createMovie(Movie *m){
         return 1;
 }
 
-void readMovie(Movie m){
+void readMovie(Movie m){ // 영화 데이터 조회
         if(m.ranking!=-1){
 		printf("%-20s / %-5s / %-3.1f / %-5s / %-10s / %d\n",
                 m.movie_name, m.director, m.star, m.genre, m.date, m.ranking);
         }
 }
 
-void updateMovie(Movie *m){
+void updateMovie(Movie *m){ // 영화 관련 데이터 수정
         getchar();
         printf("수정할 영화 제목은? ");
         scanf("%[^\n]s", m->movie_name);
@@ -72,14 +72,14 @@ void updateMovie(Movie *m){
         printf("=> 수정됨!\n");
 }
 
-int deleteMovie(Movie *m){
+int deleteMovie(Movie *m){ // 추가한 영화 삭제
         m-> ranking = -1; 
         printf("\n=> 선택한 영화가 삭제되었습니다!\n"); 
 
         return 1;
 }
 
-void listMovie(Movie *m, int count){
+void listMovie(Movie *m, int count){ // 영화 관련 데이터 모든 정보 출력
           printf("\nNo %-20s / %s / %s / %s / %s / %s \n", "Movie Title", "Director", "Start", "Genre", "Open Date", "Ranking");
 	  printf("**************************************************************************\n");
           for(int i = 0; i < count; i++){ 
