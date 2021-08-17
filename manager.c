@@ -1,20 +1,21 @@
 #include <stdlib.h>
 #include <string.h>
 
-void saveData(Movie *m, int count){
+void saveData(Movie *m, int count){ // 영화 데이터 텍스트 파일에 저장
     FILE *fp;
     fp = fopen("movie.txt", "wt");
 
     for(int i = 0 ; i < count ; i++){
         if(m[i].ranking == -1) continue;
-        fprintf(fp, "%s | %s %.1f %s %s %d\n", m[i].movie_name, m[i].director, m[i].star, m[i].genre, m[i].date, m[i].ranking);
+        fprintf(fp, "%s | %s %.1f %s %s %d\n", m[i].movie_name, 
+		m[i].director, m[i].star, m[i].genre, m[i].date, m[i].ranking);
     }
 
     fclose(fp);
     printf("성공적으로 저장되었습니다!\n");
 }
 
-int loadData(Movie *m){
+int loadData(Movie *m){ // 텍스트 파일 불러오기
     int max = 50; 
     int count = 0; 
     FILE *fp;
@@ -25,12 +26,10 @@ int loadData(Movie *m){
 	return 0;
     }
 
-    while( EOF!=fscanf(fp, "%s | %s %f %s %s %d\n", m[count].movie_name, m[count].director, &m[count].star, m[count].genre, m[count].date, &m[count].ranking)){         
-
+    while( EOF!=fscanf(fp, "%s | %s %f %s %s %d\n", m[count].movie_name, 
+	m[count].director, &m[count].star, m[count].genre, m[count].date, &m[count].ranking)){         
         count++; 
-
     }
-
     fclose(fp);
     printf("성공적으로 불러오기 되었습니다!\n");
 
@@ -38,15 +37,17 @@ int loadData(Movie *m){
     return count;
 }
 
-void searchMovie(Movie *m, int count){
+void searchMovie(Movie *m, int count){ // 영화 제목 검색
     int scnt = 0;
     char search_name[100];
 
     printf("검색할 영화 제목은? ");
     scanf("%s", search_name);
 
-    printf("\nNo %-20s / %s / %s / %s / %s / %s \n", "Movie Title", "Director", "Start", "Genre", "Open Date", "Ranking");
-	printf("**************************************************************************\n");
+    printf("\nNo %-20s / %s / %s / %s / %s / %s \n", "Movie Title", 
+	   "Director", "Start", "Genre", "Open Date", "Ranking");
+	printf("***************************************
+	       ***********************************\n");
     for(int i = 0 ; i < count ; i++){
         if(m[i].ranking == -1) continue;
         if(strstr(m[i].movie_name, search_name)) {
@@ -60,15 +61,17 @@ void searchMovie(Movie *m, int count){
     }
 }
 
-void searchStar(Movie *m, int count){
+void searchStar(Movie *m, int count){ // 영화 별점 검색
     int scnt = 0;
     float search_star;
 
     printf("검색할 영화 별점은? ");
     scanf("%f", &search_star);
 
-    printf("\nNo %-20s / %s / %s / %s / %s / %s \n", "Movie Title", "Director", "Start", "Genre", "Open Date", "Ranking");
-	printf("**************************************************************************\n");
+    printf("\nNo %-20s / %s / %s / %s / %s / %s \n", "Movie Title", 
+	   "Director", "Start", "Genre", "Open Date", "Ranking");
+	printf("**************************************
+	       ************************************\n");
     for(int i = 0 ; i < count ; i++){
         if(m[i].ranking == -1) continue;
         if(m[i].star == search_star) {
@@ -82,15 +85,17 @@ void searchStar(Movie *m, int count){
     }
 }   
 
-void searchDirector(Movie *m, int count){
+void searchDirector(Movie *m, int count){ // 영화 감독 검색
     int scnt = 0;
     char name[50];
 
         printf("검색할 감독은? ");
         scanf("%s", name); 
         
-        printf("\nNo %-20s / %s / %s / %s / %s / %s \n", "Movie Title", "Director", "Start", "Genre", "Open Date", "Ranking");
-	printf("**************************************************************************\n");
+        printf("\nNo %-20s / %s / %s / %s / %s / %s \n", "Movie Title", 
+	       "Director", "Start", "Genre", "Open Date", "Ranking");
+	printf("****************************************
+	       **********************************\n");
 
         for(int i=0; i<count; i++){ 
                 if(m[i].ranking == -1) continue;
@@ -105,15 +110,17 @@ void searchDirector(Movie *m, int count){
     }    
 }
 
-void searchGenre(Movie *m, int count){
+void searchGenre(Movie *m, int count){ // 영화 장르 검색
     int scnt = 0;
     char name[50];
 
         printf("검색할 장르는? ");
         scanf("%s", name); 
         
-        printf("\nNo %-20s / %s / %s / %s / %s / %s \n", "Movie Title", "Director", "Start", "Genre", "Open Date", "Ranking");
-	printf("**************************************************************************\n");
+        printf("\nNo %-20s / %s / %s / %s / %s / %s \n", "Movie Title", 
+	       "Director", "Start", "Genre", "Open Date", "Ranking");
+	printf("************************************
+	       **************************************\n");
 
     for(int i=0; i<count; i++){ 
                 if(m[i].ranking == -1) continue;
