@@ -1,6 +1,7 @@
 #include <stdio.h> 
 #include <string.h> 
 
+// 구조체 선언
 typedef struct {
   char movie_name[100];
   char director[50];
