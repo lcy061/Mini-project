@@ -80,7 +80,8 @@ int deleteMovie(Movie *m){ // 추가한 영화 삭제
 }
 
 void listMovie(Movie *m, int count){ // 영화 관련 데이터 모든 정보 출력
-          printf("\nNo %-20s / %s / %s / %s / %s / %s \n", "Movie Title", "Director", "Start", "Genre", "Open Date", "Ranking");
+          printf("\nNo %-20s / %s / %s / %s / %s / %s \n", 
+		 "Movie Title", "Director", "Start", "Genre", "Open Date", "Ranking");
 	  printf("**************************************************************************\n");
           for(int i = 0; i < count; i++){ 
 		if(m[i].ranking == -1) continue;
