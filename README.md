@@ -1,7 +1,7 @@
 영화 정보 관리 프로그램🎬
 =============================
 
-<img src="https://cdn.pixabay.com/photo/2019/04/24/21/55/cinema-4153289_1280.jpg" alt="movie_picture"></img>
+<img src="https://cdn.pixabay.com/photo/2019/04/24/21/55/cinema-4153289_1280.jpg" alt="movie_picture" width=50%></img>    
 자신이 담아두고 싶은 영화 정보를 자유롭게 관리할 수 있도록, 여러 가지 기능을 제공하는 프로그램입니다.
 
 **Mini Project 주제**
